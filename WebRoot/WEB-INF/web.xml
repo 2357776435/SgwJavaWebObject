@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>	
+      <!--确认字符类型-->
+<filter>
+  <filter-name>SgwFilter</filter-name>
+  <filter-class>cn.sgw.filter.SgwFilter</filter-class>
+  </filter>
+<filter-mapping>
+  	 <filter-name>SgwFilter</filter-name>
+  	 <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>Flow_Obj_def</servlet-name>
+    <servlet-class>stu.sgw.servlet.Flow_Obj_def</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Flow_Add_def</servlet-name>
+    <servlet-class>stu.sgw.servlet.Flow_Add_def</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>Flow_Obj_def</servlet-name>
+    <url-pattern>/Flow_Obj_def</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Flow_Add_def</servlet-name>
+    <url-pattern>/Flow_Add_def</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
